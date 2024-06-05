@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+  checkServerWorking,
   userRegister,
   userLogin,
   addGallery,
@@ -11,6 +12,7 @@ import { upload } from "../../middlewares/multer.middlewares.js";
 
 const router = Router();
 
+router.route("/server-is-working").get(checkServerWorking);
 router.route("/register").post(userRegister);
 router.route("/login").post(userLogin);
 

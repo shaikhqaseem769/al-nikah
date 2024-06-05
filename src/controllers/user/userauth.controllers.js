@@ -13,6 +13,12 @@ import {
 
 import { getStaticFilePath, getLocalPath } from "../../utils/helpers.js";
 
+const checkServerWorking = asyncHandler(async (req, res) => {
+  return res
+    .status(201)
+    .json(new ApiResponse(201, new Object(), "Server is working!"));
+});
+
 const userRegister = asyncHandler(async (req, res) => {
   const {
     first_name,
@@ -166,4 +172,10 @@ const deleteGalleryImage = asyncHandler(async (req, res) => {
     .json(new ApiResponse(201, user, "Image deleted successfully!"));
 });
 
-export { userRegister, userLogin, addGallery, deleteGalleryImage };
+export {
+  checkServerWorking,
+  userRegister,
+  userLogin,
+  addGallery,
+  deleteGalleryImage,
+};
