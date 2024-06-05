@@ -1,7 +1,7 @@
 import { ApiResponse } from "../../utils/ApiResponse.js";
 import { ApiError } from "../../utils/ApiError.js";
 import { asyncHandler } from "../../utils/asyncHandler.js";
-import { SubCommunity } from "../../models/Subcommunity.models.js";
+import { SubCommunity } from "../../models/SubCommunity.models.js";
 
 const addSubCommunity = asyncHandler(async (req, res) => {
   const { name, community } = req.body;
