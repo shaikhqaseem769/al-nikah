@@ -1,5 +1,6 @@
 export const DB_NAME = "alnikah";
 
+export const THREAD_COUNT = 4;
 export const UserRolesEnum = {
   ADMIN: "ADMIN",
   USER: "USER",
